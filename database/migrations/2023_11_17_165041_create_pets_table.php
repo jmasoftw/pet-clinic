@@ -22,7 +22,8 @@ return new class extends Migration
 
             $table->foreignId('owner_id')
                 ->nullable()                        // we allow pets without an owner
-                ->constrained('owners');
+                ->constrained('owners')
+                ->cascadeOnDelete();
 
         });
     }
